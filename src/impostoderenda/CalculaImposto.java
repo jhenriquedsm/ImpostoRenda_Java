@@ -1,6 +1,7 @@
 package impostoderenda;
 
 import java.text.DecimalFormat;
+import java.util.Scanner;
 
 public class CalculaImposto {
 	
@@ -8,10 +9,15 @@ public class CalculaImposto {
 	
 	public static void main(String[] args) {
 		
-		double salario = 10155.70;
+		Scanner entrada = new Scanner(System.in);
+
+		double salario = 0.00f;
 		double aliquota;
 		double valorImposto;
 		
+		System.out.print("Insira o valor do salário: ");
+		salario = entrada.nextFloat();
+
 		if(salario <= 1903.98) {
 			System.out.println("Isento de Imposto de Renda!");
 		} else if(salario >= 1903.99 && salario <= 2826.65) {
